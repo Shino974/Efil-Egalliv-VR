@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class FirePistolScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private float bulletSpeed = 10.0f;
 
-    // Update is called once per frame
-    void Update()
+    public void FireWaterBullet()
     {
-        
+        GameObject spawnBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
+        spawnBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * bulletSpeed;
+        Destroy(spawnBullet, 5.0f);
     }
 }

@@ -12,12 +12,18 @@ public class TargetDummyBasics : MonoBehaviour
         if (other.gameObject.CompareTag("Sword") || other.gameObject.CompareTag("Bullet"))
         {
             dummyAnimator.SetTrigger("Death");
-            Destroy(other.gameObject.GetComponent<BoxCollider>());
         }
     }
 
     public void ActivateDummy()
     {
-        dummyAnimator.SetTrigger("Activate");
+        dummyAnimator.SetTrigger("Activate");        
+        dummyAnimator.ResetTrigger("Death");
+    }
+    
+    public void DesactivateDummy()
+    {   
+        dummyAnimator.ResetTrigger("Activate");
+        dummyAnimator.SetTrigger("Death");
     }
 }

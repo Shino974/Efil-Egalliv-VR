@@ -10,11 +10,11 @@ public class FirePistolScript : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip fireSound;
 
-    public void FireWaterBullet()
+    public void FirePistolBullet()
     {
         GameObject spawnBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
         spawnBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * bulletSpeed;
-        Destroy(spawnBullet, 5.0f);
         audioSource.PlayOneShot(fireSound);
+        Destroy(spawnBullet, 5.0f);
     }
 }

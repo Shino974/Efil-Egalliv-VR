@@ -19,8 +19,6 @@ public class FixedXRGrabInteractible : XRGrabInteractable
         {
             attachTransform = RightHandAttachTransform;
         }
-        
-        Debug.Log(args.interactorObject.transform.gameObject);
         base.OnSelectEntered(args);
     }
 }

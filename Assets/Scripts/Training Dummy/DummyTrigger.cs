@@ -1,8 +1,16 @@
+using System;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class DummyTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject[] targetDummies;
+    public int dummyCount = 0;
+
+    private void Awake()
+    {
+        dummyCount = targetDummies.Length;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,5 +21,10 @@ public class DummyTrigger : MonoBehaviour
                 dummy.GetComponent<TargetDummyBasics>().ActivateDummy();
             }
         }
+    }
+
+    public void CountdownDummy()
+    {
+        dummyCount--;
     }
 }

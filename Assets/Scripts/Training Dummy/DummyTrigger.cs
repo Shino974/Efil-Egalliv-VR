@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 public class DummyTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject[] targetDummies;
-    public int dummyCount = 0;
+    public int dummyCount;
 
     private void Awake()
     {

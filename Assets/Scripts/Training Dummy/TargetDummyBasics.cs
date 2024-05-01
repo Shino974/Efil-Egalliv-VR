@@ -25,7 +25,6 @@ public class TargetDummyBasics : MonoBehaviour
             scoreDummy.AddScore();
             this.GetComponent<BoxCollider>().enabled = false;
             dummyTrigger.CountdownDummy();
-            //Destroy(this.gameObject);
         }
     }
 

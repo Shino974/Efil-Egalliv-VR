@@ -6,13 +6,17 @@ using UnityEngine;
 public class ScoreDummy : MonoBehaviour
 {
     /*---------SCORE--------*/
+    [Tooltip("The score text")]
     public TMP_Text scoreText;
+    [Tooltip("The high score text")]
     public TMP_Text highScoreText;
     private int maxScore = 15;
     private int scoreValue = 0;
 
     /*---------TIME--------*/
+    [Tooltip("The timer text")]
     public TMP_Text timerText;
+    [Tooltip("The high score time text")]
     public TMP_Text highScoreTimeText;
     private float elapsedTime = 60f;
     private float maxTime = 60f;
@@ -23,16 +27,22 @@ public class ScoreDummy : MonoBehaviour
     private DummyTrigger dummyTriggerScript;
 
     /*---------STATE--------*/
+    [Tooltip("The win text")]
     public TMP_Text winText;
+    [Tooltip("The lose text")]
     public TMP_Text loseText;
-
+    
     private void Awake()
     {
+        /*---------INITIALIZE_STATE--------*/
         winText.enabled = false;
         loseText.enabled = false;
+        /*---------INITIALIZE_SCRIPTS--------*/
         dummyTriggerScript = FindObjectOfType<DummyTrigger>();
+        /*---------INITIALIZE_SCORE--------*/
         scoreText.text = "Score: " + scoreValue;
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScoreDummy", 0);
+        /*---------INITIALIZE_TIME--------*/
         highScoreTime = PlayerPrefs.GetFloat("HighScoreTimeDummy", maxTime);
         highScoreTimeText.text = "Best Time: " + highScoreTime;
         timerText.text = "Time Left: " + elapsedTime;

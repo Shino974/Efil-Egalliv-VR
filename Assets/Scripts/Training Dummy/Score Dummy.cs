@@ -31,11 +31,6 @@ public class ScoreDummy : MonoBehaviour
         winText.enabled = false;
         loseText.enabled = false;
         dummyTriggerScript = FindObjectOfType<DummyTrigger>();
-        if (dummyTriggerScript == null)
-        {
-            Debug.LogError("DummyTrigger component not found in the scene. Please ensure it is present.");
-            return;
-        }
         scoreText.text = "Score: " + scoreValue;
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScoreDummy", 0);
         highScoreTime = PlayerPrefs.GetFloat("HighScoreTimeDummy", maxTime);

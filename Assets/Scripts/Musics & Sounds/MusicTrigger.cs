@@ -3,11 +3,12 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-[Tooltip("Play a sound or a music when the player triggers an object")]
+[Tooltip("Play a sound or a music when the player triggers something")]
 public class MusicTrigger : MonoBehaviour
 {
     [Tooltip("Define is the music is a loop or not")]
     public bool isLoop = false;
+    
     [Tooltip("The volume of the sound")]
     public float volume = 1.0f;
     

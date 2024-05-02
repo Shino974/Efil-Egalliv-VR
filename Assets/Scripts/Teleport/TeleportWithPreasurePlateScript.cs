@@ -4,19 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(TeleportScript))]
+[Tooltip("Teleport the player to a specific position when the player enters trigger something")]
 public class TeleportWithPreasurePlateScript : MonoBehaviour
 {
-    [SerializeField] string targetSceneName;
-    [SerializeField] Vector3 targetPosition;
+    [Tooltip("The name of the scene where the player will be teleported")]
+    [SerializeField] private string targetSceneName;
+    
+    [Tooltip("The position where the player will be teleported")]
+    [SerializeField] private Vector3 targetPosition;
+    
     private TeleportScript _teleportScript;
 
     private void Awake()
     {
         _teleportScript.GetComponent<TeleportScript>();
         if (_teleportScript == null)
-        {
             Debug.LogError("Teleport script not found");
-        }
     }
 
     private void SetVariables()

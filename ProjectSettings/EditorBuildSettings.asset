@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainCity.unity
+    guid: 9e7f8866107420c479c0f274a78f892c
+  - enabled: 1
     path: Assets/Scenes/FightSoldierScene 1.unity
     guid: 730c0f1b080c60647b24ce093b6766bf
+  - enabled: 1
+    path: Assets/Scenes/EasterEggMattisScene.unity
+    guid: 8f809158dba477f41ba1bf56f57c02cc
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: aea0085c362c7ac4a9482d5214a9ead5,
       type: 2}

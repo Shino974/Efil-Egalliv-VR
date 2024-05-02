@@ -2,42 +2,45 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+[Tooltip("Play a sound or a music when the player triggers an object")]
 public class MusicTrigger : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public bool isLoop;
-    private bool isPlaying = false;
-    private bool hasPlayed = false;
+    [Tooltip("Define is the music is a loop or not")]
+    public bool isLoop = false;
+    [Tooltip("The volume of the sound")]
+    public float volume = 1.0f;
+    
+    private AudioSource _audioSource;
+    private bool _isPlaying = false;
+    private bool _hasPlayed = false;
 
-    private void Start()
+    private void Awake()
     {
-        if (isLoop)
-            audioSource.loop = true;
-        else
-            audioSource.loop = false;
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.loop = isLoop ? true : false;
+        _audioSource.volume = volume;
     }
 
     private void Update()
     {
-        if (!audioSource.isPlaying && isPlaying)
-        {
-            isPlaying = false;
-        }
+        if (!_audioSource.isPlaying && _isPlaying)
+            _isPlaying = false;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !hasPlayed) // Vérifier si le joueur entre en collision avec le cube et si la musique n'a pas encore été jouée
+        if (other.CompareTag("Player") && !_hasPlayed) // Vérifier si le joueur entre en collision avec le cube et si la musique n'a pas encore été jouée
         {
-            if (!isPlaying)
+            if (!_isPlaying)
             {
-                audioSource.Play();
-                isPlaying = true;
+                _audioSource.Play();
+                _isPlaying = true;
             }
             if (isLoop)
-                hasPlayed = true;
+                _hasPlayed = true;
             else
-                hasPlayed = false;
+                _hasPlayed = false;
         }
     }
 }

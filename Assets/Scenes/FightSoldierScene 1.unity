@@ -1400,8 +1400,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3121b5d54dc4bc444ac56e65e79b24f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 2
+  mode: 0
   volume: 1
+  is3DSpatialBlend: 1
+  musicClips: []
 --- !u!82 &113480137
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30919,8 +30921,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3121b5d54dc4bc444ac56e65e79b24f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 1
+  mode: 0
   volume: 1
+  is3DSpatialBlend: 1
+  musicClips: []
 --- !u!135 &2128260632
 SphereCollider:
   m_ObjectHideFlags: 0

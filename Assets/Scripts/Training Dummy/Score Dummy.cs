@@ -80,6 +80,7 @@ public class ScoreDummy : MonoBehaviour
 
                     /*---------ENABLE_SCRIPT--------*/
                     winText.enabled = true;
+                    PlayerPrefs.SetInt("MedalCount", 1);
                     enabled = false;
                 }
             }
@@ -102,6 +103,7 @@ public class ScoreDummy : MonoBehaviour
                 }
 
                 loseText.enabled = true;
+                PlayerPrefs.SetInt("MedalCount", 4);
                 enabled = false;
             }
         }

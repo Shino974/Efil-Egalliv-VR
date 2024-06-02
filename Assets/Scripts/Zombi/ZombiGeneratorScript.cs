@@ -16,9 +16,16 @@ public class ZombiGeneratorScript : MonoBehaviour
 
     private IEnumerator GenerateZombis()
     {
-        for (int i = 0; i < 30; i++) // 30 times for 1 minute (2 seconds interval)
+        yield return new WaitForSeconds(10f); // Wait for 10 seconds before starting
+
+        int zombiCount = 1; // Start with 1 zombi
+
+        for (int i = 0; i < 150; i++) // 150 times for 5 minutes (2 seconds interval)
         {
-            int zombiCount = (i < 15) ? 1 : 2; // Generate 1 zombi for the first 30 seconds, then 2 zombis
+            if (i % 30 == 0 && i > 0) // Every minute (30 iterations), double the zombi count
+            {
+                zombiCount *= 2;
+            }
 
             for (int j = 0; j < zombiCount; j++)
             {

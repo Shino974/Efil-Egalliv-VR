@@ -2225,9 +2225,11 @@ GameObject:
   - component: {fileID: 2349014427845345634}
   - component: {fileID: 5201633746773437697}
   - component: {fileID: 4318660843846588265}
+  - component: {fileID: 1901760044071685121}
+  - component: {fileID: 7008939304641536134}
   m_Layer: 0
   m_Name: ZombieFemalePrefab
-  m_TagString: Untagged
+  m_TagString: Zombi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2308,10 +2310,10 @@ Animator:
   m_GameObject: {fileID: 2247018397592788069}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b20a3c10714a6ac439af479e3273de65, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d584cd502d6ec544c9d234ce4fdf5b84, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -2331,8 +2333,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f5a0d0ccd911064db130db3bf973996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1085460039768572094, guid: 0b84c0fb0ee0fb047b0dd6f494c52a76, type: 3}
   speed: 3
+--- !u!114 &1901760044071685121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2247018397592788069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db8cf9456354654f894ef011549b186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &7008939304641536134
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2247018397592788069}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &2257806998489780867
 GameObject:
   m_ObjectHideFlags: 0

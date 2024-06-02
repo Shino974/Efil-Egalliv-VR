@@ -68,7 +68,7 @@ public class ScoreDummy : MonoBehaviour
                     if (elapsedTime < highScoreTime)
                     {
                         PlayerPrefs.SetFloat("HighScoreTimeDummy", elapsedTime);
-                        highScoreTimeText.text = "Best Time: " + PlayerPrefs.GetFloat("HighScoreTimeDummy", maxTime).ToString();
+                        highScoreTimeText.text = "Best Time: " + PlayerPrefs.GetFloat("HighScoreTimeDummy", maxTime);
                     }
 
                     /*---------SCORE--------*/
@@ -92,7 +92,7 @@ public class ScoreDummy : MonoBehaviour
                 if (elapsedTime < highScoreTime)
                 {
                     PlayerPrefs.SetFloat("HighScoreTimeDummy", elapsedTime);
-                    highScoreTimeText.text = "Best Time: " + PlayerPrefs.GetFloat("HighScoreTimeDummy", maxTime).ToString();
+                    highScoreTimeText.text = "Best Time: " + PlayerPrefs.GetFloat("HighScoreTimeDummy", maxTime);
                 }
 
                 /*---------SCORE--------*/
@@ -132,6 +132,6 @@ public class ScoreDummy : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScoreDummy", 0);
-        highScoreTimeText.text = "Best Time: " + PlayerPrefs.GetFloat("HighScoreTimeDummy", maxTime).ToString();
+        highScoreTimeText.text = "Best Time: " + PlayerPrefs.GetFloat("HighScoreTimeDummy", maxTime);
     }
 }

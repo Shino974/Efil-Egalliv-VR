@@ -37,6 +37,8 @@ public class NarrationScript : MonoBehaviour
     [Tooltip("The barrier for the boss scene")]
     [SerializeField] private GameObject barrierBoss;
     
+    [SerializeField] private GameObject[] medals; 
+    
     private AudioSource _audioSource;
     private int _medalCount;
 
@@ -89,16 +91,19 @@ public class NarrationScript : MonoBehaviour
             else if (PlayerPrefs.GetInt("MedalCount") == 1)
             {
                 _audioSource.clip = clipFirstMedal;
+                medals[0].SetActive(true);
                 _audioSource.Play();
             }
             else if (PlayerPrefs.GetInt("MedalCount") == 2)
             {
                 _audioSource.clip = clipSecondMedal;
+                medals[1].SetActive(true);
                 _audioSource.Play();
             }
             else if (PlayerPrefs.GetInt("MedalCount") == 3)
             {
                 _audioSource.clip = clipOutro;
+                medals[2].SetActive(true);
                 _audioSource.Play();
             }
             else if (PlayerPrefs.GetInt("MedalCount") == 4)

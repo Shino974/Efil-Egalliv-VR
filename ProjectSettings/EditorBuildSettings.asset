@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EasterEggMattisScene.unity
     guid: 8f809158dba477f41ba1bf56f57c02cc
+  - enabled: 1
+    path: Assets/Scenes/SurvivalScene.unity
+    guid: 4103589642718704ea18bf3c13ed65fa
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: aea0085c362c7ac4a9482d5214a9ead5,
       type: 2}
